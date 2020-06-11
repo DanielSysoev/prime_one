@@ -586,6 +586,10 @@ img {
   top: 45px;
 }
 
+.header__burger .header__nav-close {
+  display: none;
+}
+
 .header__burger .burger__line {
   display: block;
   width: 100%;
@@ -729,13 +733,16 @@ img {
 }
 
 .intro__slider {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .intro__left {
-  min-width: 50%;
+  width: 50%;
 }
 
 .intro__pic {
@@ -746,7 +753,7 @@ img {
 }
 
 .intro__right {
-  min-width: 50%;
+  width: 50%;
   background-color: #000;
   padding: 0 60px;
 }
@@ -813,6 +820,10 @@ img {
 
 .catering__img {
   margin-bottom: 25px;
+}
+
+.catering__img-item {
+  width: inherit;
 }
 
 .catering__title {
@@ -920,7 +931,7 @@ img {
 }
 
 .benefits__subtitle {
-  max-width: 288px;
+  max-width: 245px;
 }
 
 .footer__upper {
@@ -1019,14 +1030,15 @@ img {
 .footer__map {
   width: 50%;
   height: 100%;
-  background-color: #000;
+  overflow: hidden;
 }
 
 .footer__map-img {
-  max-width: 100%;
+  width: 100%;
   height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
 }
 
 .footer__form {
@@ -1186,6 +1198,10 @@ img {
 }
 
 @media screen and (max-width: 860px) {
+  .header .header__nav-close {
+    display: unset;
+  }
+
   .header__burger {
     display: block;
   }
@@ -1292,12 +1308,212 @@ img {
   }
 }
 
+@media screen and (max-width: 766px) {
+  .benefits__card-icon {
+    padding-left: 12px;
+  }
+}
+
 @media screen and (max-width: 720px) {
   .benefits__title {
     font-size: 30px;
   }
 
   .benefits__banner {
-    height: 75px;
+    height: 50px;
+  }
+}
+
+@media screen and (max-width: 645px) {
+  .catering__cards {
+    grid-template-columns: 50%;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 50px;
+  }
+
+  .catering__img {
+    margin-bottom: 25px;
+    width: 100%;
+  }
+
+  .form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+  }
+
+  .form__title {
+    max-width: 200px;
+    position: static;
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .form__input-name {
+    max-width: 280px;
+    margin-bottom: 10px;
+  }
+
+  .form__input-emailphone {
+    max-width: 280px;
+    margin-bottom: 10px;
+  }
+
+  .form__textarea {
+    max-width: 280px;
+    margin-bottom: 20px;
+  }
+
+  .form__button {
+    position: static;
+  }
+
+  .intro__left {
+    display: block;
+    min-width: 100%;
+  }
+
+  .intro__right {
+    min-width: 100%;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .wrapper {
+    width: 100%;
+  }
+
+  .header {
+    height: 100px;
+  }
+
+  .header__languages {
+    display: none;
+  }
+
+  .header__order {
+    display: none;
+  }
+
+  .header__logo-mobile {
+    position: relative;
+    width: 100%;
+  }
+
+  .header__logo-mobile-pic {
+    -webkit-transform: scale(0.7);
+        -ms-transform: scale(0.7);
+            transform: scale(0.7);
+    display: block;
+    position: absolute;
+    left: -40px;
+    top: 5px;
+  }
+
+  .header__burger {
+    right: 0;
+    top: 45px;
+  }
+
+  .footer__upper {
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    width: 100%;
+  }
+
+  .footer__title {
+    font-size: 30px;
+    width: 100%;
+  }
+
+  .footer__contact-icon {
+    -webkit-transform: scale(0.7);
+        -ms-transform: scale(0.7);
+            transform: scale(0.7);
+  }
+
+  .footer__contacts-social {
+    position: relative;
+    bottom: 10px;
+  }
+
+  .benefits {
+    margin-bottom: 5px;
+  }
+
+  .benefits__banner-sm {
+    background: #000 url(../img/whochoose.jpg) no-repeat right center;
+    background-size: 35% 100%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .benefits {
+    margin-bottom: 5px;
+  }
+
+  .benefits__banner-sm {
+    background: #000 url(../img/whochoose.jpg) no-repeat right center;
+    background-size: 30% 100%;
+  }
+
+  .footer__upper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    height: 350px;
+    margin-bottom: 0;
+  }
+
+  .footer__contacts {
+    width: 100%;
+  }
+
+  .footer__copyright {
+    font-size: 10px;
+  }
+
+  .footer__bottom {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  .form__input-name {
+    width: 260px;
+  }
+
+  .form__input-emailphone {
+    width: 260px;
+  }
+
+  .form__textarea {
+    width: 260px;
   }
 }
