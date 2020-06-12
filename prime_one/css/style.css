@@ -1472,6 +1472,37 @@ img {
     background-size: 30% 100%;
   }
 
+  .benefits__cards-bg {
+    padding-top: 30px;
+  }
+
+  .benefits__card {
+    width: 100%;
+    padding-left: 0;
+  }
+
+  .benefits__card-icon {
+    padding-left: 0;
+  }
+
+  .benefits__card-text {
+    padding-left: 0;
+    max-width: unset;
+    display: block;
+    width: 100%;
+  }
+
+  .benefits__title-sm {
+    max-width: unset;
+    width: inherit;
+    margin-bottom: 15px;
+  }
+
+  .benefits__subtitle {
+    max-width: unset;
+    width: inherit;
+  }
+
   .footer__upper {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1515,5 +1546,29 @@ img {
 
   .form__textarea {
     width: 260px;
+  }
+
+  .catering__cards {
+    grid-template-columns: 100%;
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 50px;
+  }
+
+  .catering__img {
+    margin-bottom: 25px;
+    width: 100%;
+  }
+
+  .catering__button {
+    font-size: 25px;
+    padding: 20px 30px;
+  }
+
+  .catering__title {
+    max-width: 200px;
+  }
+
+  .catering__subtitle {
+    font-size: 15px;
   }
 }
