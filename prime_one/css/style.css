@@ -577,6 +577,10 @@ img {
   line-height: 22px;
 }
 
+.header__nav-close {
+  display: none;
+}
+
 .header__burger {
   width: 40px;
   height: 28px;
@@ -584,10 +588,6 @@ img {
   display: none;
   right: 7px;
   top: 45px;
-}
-
-.header__burger .header__nav-close {
-  display: none;
 }
 
 .header__burger .burger__line {
