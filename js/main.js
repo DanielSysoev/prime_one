@@ -11,6 +11,7 @@
         main.classList.add('disable-scroll');
     });
     menuCloseItem.addEventListener('click', () => {
+        main.classList.remove('disable-scroll');
         menu.classList.remove('header__nav_active');
     });
     if (true) {
@@ -33,7 +34,6 @@
         let targetPosition = target.getBoundingClientRect().top;
         let startPosition = window.pageYOffset;
         let startTime = null;
-
         const ease = function (t, b, c, d) {
             t /= d / 2;
             if (t < 1) return c / 2 * t * t + b;
