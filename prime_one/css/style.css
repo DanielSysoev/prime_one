@@ -1198,6 +1198,10 @@ img {
 }
 
 @media screen and (max-width: 860px) {
+  .header .right-nav {
+    display: none;
+  }
+
   .header .header__nav-close {
     display: unset;
   }
@@ -1235,6 +1239,13 @@ img {
     -webkit-transform: translateX(0);
         -ms-transform: translateX(0);
             transform: translateX(0);
+  }
+
+  .header__nav_active html,
+  .header__nav_active body {
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
   }
 
   .header__menu-item {
@@ -1309,6 +1320,10 @@ img {
 }
 
 @media screen and (max-width: 766px) {
+  .benefits {
+    margin-bottom: 35px;
+  }
+
   .benefits__card-icon {
     padding-left: 12px;
   }
@@ -1501,6 +1516,7 @@ img {
   .benefits__subtitle {
     max-width: unset;
     width: inherit;
+    font-size: 14px;
   }
 
   .footer__upper {
@@ -1569,6 +1585,6 @@ img {
   }
 
   .catering__subtitle {
-    font-size: 15px;
+    font-size: 14px;
   }
 }
