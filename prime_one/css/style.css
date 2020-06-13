@@ -1198,6 +1198,12 @@ img {
 }
 
 @media screen and (max-width: 860px) {
+  .disable-scroll {
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+  }
+
   .header .right-nav {
     display: none;
   }
@@ -1239,13 +1245,6 @@ img {
     -webkit-transform: translateX(0);
         -ms-transform: translateX(0);
             transform: translateX(0);
-  }
-
-  .header__nav_active html,
-  .header__nav_active body {
-    margin: 0;
-    height: 100%;
-    overflow: hidden;
   }
 
   .header__menu-item {

@@ -3,10 +3,12 @@
 (function () {
     const burgerItem = document.querySelector('.burger');
     const menu = document.querySelector('.header__navs');
+    const main = document.querySelector('body');
     const menuCloseItem = document.querySelector('.header__nav-close');
     const menuLinks = document.querySelectorAll('.header__menu-link');
     burgerItem.addEventListener('click', () => {
         menu.classList.add('header__nav_active');
+        main.classList.add('disable-scroll');
     });
     menuCloseItem.addEventListener('click', () => {
         menu.classList.remove('header__nav_active');
@@ -14,6 +16,7 @@
     if (true) {
         menuLinks.forEach(element => {
             element.addEventListener('click', () => {
+                main.classList.remove('disable-scroll');
                 menu.classList.remove('header__nav_active');
             });
         })
