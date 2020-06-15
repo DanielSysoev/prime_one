@@ -1,0 +1,35 @@
+@font-face {
+    font-family: "Bebas Neue";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/bebas-neue-v1-latin-regular.eot"); /* IE9 Compat Modes */
+    src: local("Bebas Neue Regular"), local("BebasNeue-Regular"),
+        url("../fonts/bebas-neue-v1-latin-regular.eot?#iefix") format("embedded-opentype"),
+        /* IE6-IE8 */ url("../fonts/bebas-neue-v1-latin-regular.woff2") format("woff2"),
+        /* Super Modern Browsers */ url("../fonts/bebas-neue-v1-latin-regular.woff") format("woff"),
+        /* Modern Browsers */ url("../fonts/bebas-neue-v1-latin-regular.ttf") format("truetype"),
+        /* Safari, Android, iOS */ url("../fonts/bebas-neue-v1-latin-regular.svg#BebasNeue") format("svg"); /* Legacy iOS */
+}
+
+@font-face {
+    font-family: "Akzidenz Grotesk BQ - Bd Cnd";
+    src: local("Akzidenz-Grotesk BQ Bold Condensed"), local("Akzidenz-Grotesk-BQ-Bold-Condensed"),
+        url("../fonts/AkzidenzGroteskBQ-BdCnd.woff2") format("woff2"),
+        url("../fonts/AkzidenzGroteskBQ-BdCnd.woff") format("woff"),
+        url("../fonts/AkzidenzGroteskBQ-BdCnd.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "PT Sans";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/pt-sans-v11-latin-regular.eot"); /* IE9 Compat Modes */
+    src: local("PT Sans"), local("PTSans-Regular"),
+        url("../fonts/pt-sans-v11-latin-regular.eot?#iefix") format("embedded-opentype"),
+        /* IE6-IE8 */ url("../fonts/pt-sans-v11-latin-regular.woff2") format("woff2"),
+        /* Super Modern Browsers */ url("../fonts/pt-sans-v11-latin-regular.woff") format("woff"),
+        /* Modern Browsers */ url("../fonts/pt-sans-v11-latin-regular.ttf") format("truetype"),
+        /* Safari, Android, iOS */ url("../fonts/pt-sans-v11-latin-regular.svg#PTSans") format("svg"); /* Legacy iOS */
+}

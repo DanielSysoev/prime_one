@@ -1,0 +1,892 @@
+//import
+@import "reset.scss";
+@import "fonts.scss";
+
+//custom
+html {
+    box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: "PT Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    color: #000;
+    background-color: #fff;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+//SCSS
+.wrapper {
+    max-width: 872px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.wide-wrapper {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.link {
+    color: #000;
+    font-family: "Bebas Neue";
+    letter-spacing: 1.5px;
+    &:hover,
+    &:focus,
+    &:active {
+        opacity: 0.85;
+        transition: 0.2s all;
+    }
+    white-space: nowrap;
+}
+
+.button {
+    color: #fff;
+    background-color: #000;
+    font-family: "Bebas Neue";
+    line-height: 15px;
+    letter-spacing: 1.5px;
+    padding: 13px 20px;
+    border: none;
+    &:hover,
+    &:focus,
+    &:active {
+        opacity: 0.85;
+        transition: 0.2s linear;
+    }
+}
+
+.title {
+    max-width: 121px;
+    font-family: "Akzidenz Grotesk BQ - Bd Cnd";
+    font-size: 25px;
+    line-height: 25px;
+}
+
+.subtitle {
+    font-size: 13px;
+    line-height: 22px;
+}
+
+//  BURGER
+.header__nav-close {
+    display: none;
+}
+.header__burger {
+    width: 40px;
+    height: 28px;
+    position: absolute;
+    display: none;
+    right: 7px;
+    top: 45px;
+
+    .burger__line {
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: #000;
+        position: absolute;
+        left: 0;
+    }
+
+    .burger__line-first {
+        top: 0;
+    }
+
+    .burger__line-second {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .burger__line-third {
+        bottom: 0;
+    }
+}
+
+//  BURGER END
+//    ======== HEADER =========
+.header-wrapper {
+    position: relative;
+    height: 136px;
+}
+.header {
+    padding: 0 20px;
+    margin-bottom: 5px;
+
+    &__logo-mobile {
+        display: none;
+    }
+    &__languages {
+        position: absolute;
+        left: 20px;
+        top: 20px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__languages-item {
+        font-family: "Bebas Neue";
+        font-size: 10px;
+        letter-spacing: 1px;
+        text-decoration: underline;
+
+        padding: 3px;
+        margin-right: 10px;
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &:hover,
+        &:active,
+        &:focus {
+            text-decoration: none;
+            color: #fff;
+            background-color: #000;
+        }
+    }
+    &__order {
+        font-family: "Akzidenz Grotesk BQ - Bd Cnd";
+        letter-spacing: unset;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        &:hover,
+        &:focus,
+        &:active {
+            opacity: 0.8;
+        }
+    }
+
+    &__logo {
+        padding: 0 10px;
+        cursor: pointer;
+    }
+    &__navs {
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 3px 0 3px;
+    }
+    &__menu {
+        width: 265px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__menu-link {
+        color: #000;
+        font-family: "Akzidenz Grotesk BQ - Bd Cnd";
+        line-height: 20px;
+        letter-spacing: 1.5px;
+        text-decoration: none;
+        &:hover,
+        &:focus,
+        &:active {
+            opacity: 0.6;
+            transition: 0.2 all;
+        }
+    }
+}
+
+//    ======== HEADER END =========
+
+//    ======== INTRO =========
+
+.intro {
+    margin-bottom: 75px;
+    color: #fff;
+    padding-top: 10px;
+
+    &__slider {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__left {
+        width: 50%;
+    }
+    &__pic {
+        width: 100%;
+        min-height: 100%;
+        object-fit: cover;
+    }
+    &__right {
+        width: 50%;
+        background-color: #000;
+        padding: 0 60px;
+    }
+    &__title {
+        max-width: 200px;
+        font-size: 50px;
+        line-height: 50px;
+        margin: 82px 0 37px 0;
+    }
+    &__subtitle {
+        max-width: 303px;
+        opacity: 0.8;
+        margin-bottom: 55px;
+    }
+
+    &__actions {
+        margin-bottom: 75px;
+    }
+    &__button {
+        color: #000;
+        background-color: #fff;
+        margin-bottom: 30px;
+    }
+    &__link {
+        color: #fffffe;
+        opacity: 0.9;
+        &:hover,
+        &:focus,
+        &:active {
+            opacity: 1;
+        }
+        margin-left: 15px;
+    }
+}
+
+//    ======== INTRO END =========
+
+//    ======== CATERING =========
+
+.catering {
+    margin-bottom: 79px;
+    &__cards {
+        display: grid;
+        grid-template-columns: 25%;
+        grid-template-columns: repeat(4, 1fr);
+    }
+    &__card {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: start;
+    }
+    &__img {
+        margin-bottom: 25px;
+    }
+    &__img-item {
+        width: inherit;
+    }
+    &__title {
+        margin-bottom: 30px;
+        padding-left: 7px;
+    }
+    &__subtitle {
+        margin-bottom: 30px;
+        padding-left: 8px;
+        padding-right: 35px;
+        flex-grow: 1;
+    }
+    &__button {
+        margin-bottom: 29px;
+        margin-left: 6px;
+    }
+    &__link {
+        padding-left: 10px;
+    }
+}
+//    ======== CATERING END =========
+
+//    ======== BENEFITS =========
+
+.benefits {
+    margin-bottom: 78px;
+    &__banner {
+        height: 150px;
+        background: #000 url(../img/whochoose.jpg) no-repeat right center;
+        background-size: 50% 100%;
+        z-index: 2px;
+        background-origin: unset;
+    }
+    &__banner-sm {
+        height: inherit;
+        display: flex;
+        align-items: center;
+    }
+
+    &__title {
+        color: #fff;
+        margin-left: 10px;
+        max-width: 350px;
+        font-size: 50px;
+    }
+
+    &__cards-bg {
+        background-color: #ebebeb;
+        padding-top: 50px;
+    }
+
+    &__cards {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+    &__card {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 50px;
+        padding-left: 6px;
+        width: 50%;
+    }
+    &__card-icon {
+        max-height: 100px;
+        margin-bottom: 15px;
+    }
+
+    &__card-text {
+        padding-left: 12px;
+        max-width: 310px;
+        display: flex;
+        flex-direction: column;
+    }
+    &__title-sm {
+        margin-bottom: 25px;
+        max-width: 295px;
+    }
+    &__subtitle {
+        max-width: 245px;
+    }
+}
+
+//    ======== BENEFITS END =========
+
+//    ======== FOOTER =========
+
+.footer {
+    &__upper {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-end;
+        justify-content: center;
+        margin-bottom: 28px;
+    }
+    &__contacts {
+        padding-left: 5px;
+        min-height: 150px;
+        width: 50%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    &__title {
+        font-size: 50px;
+        line-height: 50px;
+        max-width: 217px;
+    }
+
+    &__contact-info {
+        display: flex;
+    }
+    &__contact-icon {
+        margin-right: 7px;
+    }
+
+    &__contacts-social {
+        min-height: 75px;
+        width: 50%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding-left: 8px;
+    }
+
+    &__socials {
+        width: 167px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    &__middle {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__map {
+        width: 50%;
+        height: 100%;
+        overflow: hidden;
+    }
+    &__map-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+    &__form {
+        width: 50%;
+        padding: 54px 60px;
+        background-color: #000;
+    }
+
+    &__bottom {
+        height: 126px;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__copyright {
+        color: #4d4d4d;
+        font-weight: 400;
+        line-height: 25px;
+    }
+    &__terms {
+        color: inherit;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+    &__logo {
+        padding-top: 10px;
+        width: 156px;
+        height: 65px;
+    }
+    &__logo-img {
+        width: 100%;
+    }
+}
+
+//    ======== FORM =========
+.form {
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #fff;
+    align-items: flex-start;
+    &__input-name {
+        width: 374px;
+        height: 50px;
+        background-color: #252525;
+        color: #959595;
+        border: 2px solid #959595;
+        padding: 20px 18px;
+    }
+    &__input-emailphone {
+        width: 374px;
+        height: 50px;
+        background-color: #252525;
+        color: #959595;
+        border: 2px solid #959595;
+        padding: 20px 18px;
+    }
+    &__textarea {
+        width: 374px;
+        height: 100px;
+        background-color: #252525;
+        color: #959595;
+        border: 2px solid #959595;
+        padding: 20px 18px;
+        margin-bottom: 5px;
+    }
+    &__button {
+        background-color: #fff;
+        color: #000;
+    }
+    &__title {
+        margin-bottom: 5px;
+    }
+}
+//    ======== FORM END =========
+
+//    ======== FOOTER END =========
+
+@media screen and (max-width: 960px) {
+    .form {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: space-evenly;
+        width: 100%;
+
+        &__title {
+            position: absolute;
+            font-size: 35px;
+            line-height: 35px;
+            top: 30px;
+            right: 5%;
+        }
+        &__input-name {
+            margin-bottom: 10px;
+        }
+        &__input-emailphone {
+            margin-bottom: 10px;
+        }
+        &__textarea {
+        }
+        &__button {
+            position: absolute;
+            right: 50px;
+            bottom: 30px;
+        }
+    }
+    .footer {
+        &__map {
+            width: 100%;
+            max-height: 50%;
+        }
+        &__map-img {
+            width: 100%;
+        }
+        &__form {
+            padding: 25px;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 860px) {
+    .disable-scroll {
+        margin: 0;
+        height: 100%;
+        overflow: hidden;
+    }
+    .header {
+        // BURGER
+        .right-nav {
+            display: none;
+        }
+        .header__nav-close {
+            display: unset;
+        }
+        &__burger {
+            display: block;
+        }
+        &__wrapper {
+            padding-top: 28px;
+        }
+        &__navs {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #fff;
+            z-index: 10;
+            padding: 75px;
+            transform: translateX(100%);
+            transition: 0.2s all linear;
+        }
+
+        &__logo {
+            display: none;
+        }
+
+        &__nav_active {
+            transform: translateX(0);
+        }
+
+        &__menu-item {
+            width: 100%;
+            margin-right: 0;
+            margin-bottom: 100px;
+        }
+
+        &__menu-item:last-child {
+            margin-bottom: 0;
+        }
+
+        &__menu-link {
+            font-size: 42px;
+            line-height: 48px;
+        }
+
+        &__nav-close {
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            z-index: 11;
+        }
+
+        &__nav-close-line {
+            display: block;
+            height: 2px;
+            width: 100%;
+            background-color: #000;
+            position: absolute;
+            top: 50%;
+        }
+
+        &__nav-close-line:first-child {
+            transform: translateY(-50%) rotate(45deg);
+        }
+
+        &__nav-close-line:last-child {
+            transform: translateY(-50%) rotate(-45deg);
+        }
+        // BURGER END
+        &__languages-item {
+            font-size: 20px;
+        }
+        &__order {
+            top: auto;
+            right: auto;
+            left: 22px;
+            bottom: 10px;
+            font-size: 20px;
+        }
+        &__logo-mobile {
+            display: flex;
+            height: 100%;
+            justify-content: center;
+            align-items: center;
+        }
+        &__logo-mobile-pic {
+            cursor: pointer;
+        }
+    }
+}
+@media screen and (max-width: 766px) {
+    .benefits {
+        margin-bottom: 35px;
+        &__card-icon {
+            padding-left: 12px;
+        }
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .benefits {
+        &__title {
+            font-size: 30px;
+        }
+        &__banner {
+            height: 50px;
+        }
+    }
+}
+
+@media screen and (max-width: 645px) {
+    .catering {
+        &__cards {
+            grid-template-columns: 50%;
+            grid-template-columns: repeat(2, 1fr);
+            row-gap: 50px;
+        }
+
+        &__img {
+            margin-bottom: 25px;
+            width: 100%;
+        }
+    }
+
+    .form {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+
+        &__title {
+            max-width: 200px;
+            position: static;
+            font-size: 35px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        &__input-name {
+            max-width: 280px;
+            margin-bottom: 10px;
+        }
+        &__input-emailphone {
+            max-width: 280px;
+            margin-bottom: 10px;
+        }
+        &__textarea {
+            max-width: 280px;
+            margin-bottom: 20px;
+        }
+        &__button {
+            position: static;
+        }
+    }
+
+    .intro {
+        &__left {
+            display: block;
+            min-width: 100%;
+        }
+        &__right {
+            min-width: 100%;
+            display: block;
+        }
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .wrapper {
+        width: 100%;
+    }
+    .header {
+        height: 100px;
+        &__languages {
+            display: none;
+        }
+        &__order {
+            display: none;
+        }
+        &__logo-mobile {
+            position: relative;
+            width: 100%;
+        }
+        &__logo-mobile-pic {
+            transform: scale(0.7);
+            display: block;
+            position: absolute;
+            left: -40px;
+            top: 5px;
+        }
+
+        &__burger {
+            right: 0;
+            top: 45px;
+        }
+    }
+
+    .footer {
+        &__upper {
+            align-items: flex-end;
+            justify-content: space-evenly;
+            width: 100%;
+        }
+        &__title {
+            font-size: 30px;
+            width: 100%;
+        }
+        &__contact-icon {
+            transform: scale(0.7);
+        }
+        &__contacts-social {
+            position: relative;
+            bottom: 10px;
+        }
+    }
+
+    .benefits {
+        margin-bottom: 5px;
+
+        &__banner-sm {
+            background: #000 url(../img/whochoose.jpg) no-repeat right center;
+            background-size: 35% 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .benefits {
+        margin-bottom: 5px;
+
+        &__banner-sm {
+            background: #000 url(../img/whochoose.jpg) no-repeat right center;
+            background-size: 30% 100%;
+        }
+
+        &__cards-bg {
+            padding-top: 30px;
+        }
+        &__card {
+            width: 100%;
+            padding-left: 0;
+        }
+        &__card-icon {
+            padding-left: 0;
+        }
+        &__card-text {
+            padding-left: 0;
+            max-width: unset;
+            display: block;
+            width: 100%;
+        }
+        &__title-sm {
+            max-width: unset;
+            width: inherit;
+            margin-bottom: 15px;
+        }
+        &__subtitle {
+            max-width: unset;
+            width: inherit;
+            font-size: 14px;
+        }
+    }
+
+    .footer {
+        &__upper {
+            flex-direction: column;
+            align-items: flex-start;
+            height: 350px;
+            margin-bottom: 0;
+        }
+        &__contacts {
+            width: 100%;
+        }
+        &__copyright {
+            font-size: 10px;
+        }
+        &__bottom {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    .form {
+        &__input-name {
+            width: 260px;
+        }
+        &__input-emailphone {
+            width: 260px;
+        }
+        &__textarea {
+            width: 260px;
+        }
+    }
+
+    .catering {
+        &__cards {
+            grid-template-columns: 100%;
+            grid-template-columns: repeat(1, 1fr);
+            row-gap: 50px;
+        }
+
+        &__img {
+            margin-bottom: 25px;
+            width: 100%;
+        }
+        &__button {
+            font-size: 25px;
+            padding: 20px 30px;
+        }
+        &__title {
+            max-width: 200px;
+        }
+        &__subtitle {
+            font-size: 14px;
+        }
+    }
+}
